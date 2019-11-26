@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Complete</title>
+</head>
+<body>
+<h2>File(s) Successfully Uploaded!</h2>
+    <form id="report" action="{{ url_for('report') }}">
+        <input type="submit" value="View Report"/>
+    </form>
+    <form id="uploadPage" action="{{ url_for('index') }}">
+            <input type="submit" value="Back to Upload Files"/>
+    </form>
+</body>
+</html>

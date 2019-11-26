@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payroll Report</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/report.css') }}">
+</head>
+
+<body>
+    <h1>Payroll Report</h1>
+    <table class="reportTable">
+        <thead>
+            <!-- Table headers -->
+            <th>
+                <tr>
+                    <td>Employee ID</td>
+                    <td>Pay Period</td>
+                    <td>Amount Paid</td>
+                </tr>
+            </th>
+        </thead>
+        <tbody>
+            <!-- For loop logic of jinja template -->
+            {% for i in range(0, len) %}
+            <!-- table rows -->
+            <tr>
+                <td>{{ rows[i][0] }}</td>
+                <td>{{ rows[i][1] }}</td>
+                <td>${{ rows[i][2] }}</td>
+            {%endfor%}
+            </tr>
+        </tbody>
+    </table>
+    <form id="uploadPage" action="{{ url_for('index') }}">
+            <input type="submit" value="Back to Upload Files"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+h1 {
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+table.reportTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #1C6EA4;
+    background-color: #FFFFFF;
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+table.reportTable td, table.reportTable th {
+    border: 1px solid #AAAAAA;
+    padding: 10px 2px;
+}
+
+table.reportTable tbody td {
+    font-size: 16px;
+}
+
+table.reportTable tbody tr:nth-child(even) {
+    background: #EBF5FF;
+}
+
+table.reportTable thead {
+    background: #1C6EA4;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-bottom: 3px solid #444444;
+}
+
+table.reportTable thead th:first-child {
+    display: none;
+}
