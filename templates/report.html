@@ -8,6 +8,9 @@
 
 <body>
     <h1>Payroll Report</h1>
+    <form id="uploadPage" action="{{ url_for('index') }}">
+        <button type="submit" class="view">Back to Upload Files</button>
+    </form>
     <table class="reportTable">
         <thead>
             <!-- Table headers -->
@@ -31,8 +34,5 @@
             </tr>
         </tbody>
     </table>
-    <form id="uploadPage" action="{{ url_for('index') }}">
-            <input type="submit" value="Back to Upload Files"/>
-    </form>
 </body>
 </html>

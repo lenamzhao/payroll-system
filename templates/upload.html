@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Payroll Upload</title>
-       {% with messages = get_flashed_messages(with_categories=true) %}
-          {% if messages %}
-            <ul class=flashes>
-            {% for category, message in messages %}
-              <li class="{{ category }}">{{ message }}</li>
-            {% endfor %}
-            </ul>
-          {% endif %}
-        {% endwith %}
-</head>
-<body>
-    <h1>Welcome to Wave Payroll Portal</h1>
-    <h2>Select payroll file(s) to upload</h2>
-    <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-        <input type="file" name="input-files" accept="text/csv" multiple>
-        <input type="submit" value="Submit">
+    <head>
+        <meta charset="UTF-8">
+        <title>Payroll Upload</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/upload.css') }}">
+    </head>
+    <body>
+        <h1>Welcome to Wave Payroll Portal</h1>
+        <div>
+            <h2>Select file(s) to upload:</h2>
+            <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="input-files" accept="text/csv" multiple>
+                <button type="submit" class="submit">Submit</button>
 
-    </form>
-    <form id="report" action="{{ url_for('report') }}">
-        <input type="submit" value="View Report"/>
-    </form>
-</body>
+            </form>
+            <form id="report" action="{{ url_for('report') }}">
+                <button type="submit" class="view">View Report</button>
+            </form>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class=flashes>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </body>
 </html>

@@ -1,0 +1,44 @@
+h1{
+    margin-top: 30px;
+    text-align: center;
+}
+
+body > div{
+    width: 60%;
+    border: 0.5px solid;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    display:inline-block;
+    padding:0.5em 3em;
+    margin:0 0.3em 0.3em 0;
+    background: #3D94F6;
+    color:#FFFFFF;
+    border: 1px solid #eee;
+
+}
+
+button:hover{
+    background: #016ABC;
+    color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+}
+
+button.view{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.error {
+    color: red;
+}

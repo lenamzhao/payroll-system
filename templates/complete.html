@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Upload Complete</title>
-</head>
-<body>
-<h2>File(s) Successfully Uploaded!</h2>
-    <form id="report" action="{{ url_for('report') }}">
-        <input type="submit" value="View Report"/>
-    </form>
-    <form id="uploadPage" action="{{ url_for('index') }}">
-            <input type="submit" value="Back to Upload Files"/>
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Upload Complete</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/upload.css') }}">
+    </head>
+    <body>
+        <div>
+        <h2>File(s) Successfully Uploaded!</h2>
+            <form id="report" action="{{ url_for('report') }}">
+                <button type="submit" class="view">View Report</button>
+            </form>
+            <form id="uploadPage" action="{{ url_for('index') }}">
+                <button type="submit" class="view">Back to Upload Files</button>
+            </form>
+        </div>
+    </body>
 </html>
