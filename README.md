@@ -2,7 +2,7 @@
 
 #### Pre-requisites:
 - python 3
-- read and write permission on the application folder: 'wave-challenge'
+- read and write permission on the application folder: 'payroll-system'
 
 To check your python 3 version:
 
